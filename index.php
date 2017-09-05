@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html lang="pt-br">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,7 +14,7 @@
         <?php
         function vetor($peso, $altura) {
             $total = $peso / pow($altura, 2);
-            return $total;
+            return number_format($total, 2, ',', '');
         }
 
         function calculodata($data) {
@@ -28,7 +27,10 @@
         }
         ?>
 
-<h1 class="page-header">Meus Pacientes</h1>
+        
+        
+        <h2 class="table table-inverse">Promove Nutrição</h2>
+        <h1 class="page-header">Meus Pacientes</h1>
 
         <form name="form1" method="POST">
 
@@ -44,60 +46,58 @@
                     </tr>
                 </thead>
 
-                    <tbody>
+                <tbody>
                     <tr>
                         <td>John Petrucci</td>
                         <td>100</td>
                         <td>2.00</td>
-                        <td><?php echo vetor(100, 2.00)?></td>
+                        <td><?php echo vetor(100, 2.00) ?></td>
                         <td>01/01/1980</td>
-                        <td><?php echo calculodata('01/01/1980')?>
+                        <td><?php echo calculodata('01/01/1980') ?>
                         </td>
                     </tr> 
-                    
+
                     <tr>
-                    <td>John Myung</td>
-                    <td>80</td>
-                    <td>1.72</td>
-                    <td><?php echo vetor(80, 1.72)?></td>
-                    <td>28/02/1990</td>
-                    <td><?php echo calculodata('28/02/1990')?>
-                    </td>
-                </tr> 
-                    
-                <tr>
-                <td>James Labrie</td>
-                <td>54</td>
-                <td>1.64</td>
-                <td><?php echo vetor(54, 1.64)?></td>
-                <td>10/09/1985</td>
-                <td><?php echo calculodata('10/09/1985')?>
-                </td>
-            </tr> 
-                  
-            <tr>
-            <td>Jordan Rudess</td>
-            <td>85</td>
-            <td>1.73</td>
-            <td><?php echo vetor(85, 1.73)?></td>
-            <td>04/09/1989</td>
-            <td><?php echo calculodata('04/09/1989')?>
-            </td>
-        </tr>  
-              
-        <tr>
-        <td>Mike Mangini</td>
-        <td>46</td>
-        <td>1.55</td>
-        <td><?php echo vetor(46, 1.55)?></td>
-        <td>31/12/1978</td>
-        <td><?php echo calculodata('31/12/1978')?>
-        </td>
-    </tr> 
+                        <td>John Myung</td>
+                        <td>80</td>
+                        <td>1.72</td>
+                        <td><?php echo vetor(80, 1.72) ?></td>
+                        <td>28/02/1990</td>
+                        <td><?php echo calculodata('28/02/1990') ?>
+                        </td>
+                    </tr> 
+
+                    <tr>
+                        <td>James Labrie</td>
+                        <td>54</td>
+                        <td>1.64</td>
+                        <td><?php echo vetor(54, 1.64) ?></td>
+                        <td>10/09/1985</td>
+                        <td><?php echo calculodata('10/09/1985') ?>
+                        </td>
+                    </tr> 
+
+                    <tr>
+                        <td>Jordan Rudess</td>
+                        <td>85</td>
+                        <td>1.73</td>
+                        <td><?php echo vetor(85, 1.73) ?></td>
+                        <td>04/09/1989</td>
+                        <td><?php echo calculodata('04/09/1989') ?>
+                        </td>
+                    </tr>  
+
+                    <tr>
+                        <td>Mike Mangini</td>
+                        <td>46</td>
+                        <td>1.55</td>
+                        <td><?php echo vetor(46, 1.55) ?></td>
+                        <td>31/12/1978</td>
+                        <td><?php echo calculodata('31/12/1978') ?>
+                        </td>
+                    </tr> 
                 </tbody>
             </table>
         </form>
     </body>
 </html>
-
-
